@@ -14,7 +14,7 @@ public class Driver {
 		
 		System.out.println("Current count:" + counter.getCount());
 
-		System.out.println("Apakah cd berhasil");
+		System.out.println("Apakah cd berhasil? Ternyata iya, cd berhasil!");
 		
 	}
 
