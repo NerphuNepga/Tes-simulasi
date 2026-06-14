@@ -1,0 +1,28 @@
+name: Java CI/CD dengan Maven
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Build Project dengan Maven
+      run: mvn -B package --file pom.xml
+
+    - name: Simulasi Continuous Deployment
+      run: |
+        echo "Mengunggah Artifact (file .jar) ke Server/Staging..."
+        echo "Deployment Berhasil! Aplikasi versi terbaru sudah berjalan."
