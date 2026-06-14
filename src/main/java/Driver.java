@@ -1,5 +1,3 @@
-import src.main.java.Counter;
-
 public class Driver {
 
 	public static void main(String[] args) {
@@ -15,6 +13,8 @@ public class Driver {
 		counter.decrement();
 		
 		System.out.println("Current count:" + counter.getCount());
+
+		System.out.println("Apakah cd berhasil");
 		
 	}
 
